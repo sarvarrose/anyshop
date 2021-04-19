@@ -170,3 +170,73 @@ If user visits homepage, show login/signup popup modal
       We will allow user the option to choose from the different third party payment gateways that will be integrated.
 
       We may add payment logos (card company logos, third party payment gateways logos that are integrated) to increase customer trust and reduce cart abandonment.
+
+### User Profile
+
+A user can have multiple profiles, and each profile can have associated shipping addresses and payment methods.
+
+***We will not be supporting live order tracking. It may be supported later.***
+
+- #### User Details Page
+    It will contain user details:_ Name, Email, Phone, Gender.
+        
+    The user can also update the above details.
+    
+    Also list all user profiles. A profile can also be set as default profile. The user can rename, delete a profile. If deleted, also remove all associated shipping addresses and payment methods.
+    
+    Also show all currencies supported and the option to set default currency.
+    
+    Also give the option to update password.
+    
+
+- #### Addresses Page
+
+    It will contain list of all addresses saved by the user. Give option to edit and remove the address. The address needs to be attached to a profile.
+    
+    If user edits the address, _Show below address fields:_ Name, Phone, Pincode, Address(House No./Area/Street), City/District/Town, State, Country, Select Profile to attach the address to.
+    
+- #### Payment Methods Page
+
+    It will contain list of all payment methods saved by the user. Give option to edit and remove the payment methods. The payment method needs to be attached to a profile.
+    
+    If user edits the payment method, _Show below payment method fields:_ Name, Card Number, Valid Month, Valid Year, Card Alias, Select Profile to attach the address to. _Show below address fields:_ Name, Pincode, Address(House No./Area/Street), City/District/Town, State, Country.
+    
+    If the payment method has an associated billing address, give option to add address.
+    
+- #### Orders Listing Page
+
+	Show a list of all orders.
+	
+	Each order will list all products in order.
+
+    _Order details to show_: Brief name of items, Total Price, Order Date, status (Order Placed, Delivered, Returned, Cancelled)
+
+
+- #### Order Details Page
+
+	If user comes to this page when new order was placed, then show a success message that your order has been placed.
+	
+	_Individual Product Details to show:_ Product Image, Name, Price, Latest status Update Date, status (Order Placed / Delivered / Returned / Cancelled)
+
+	_Order Details to show:_ Total Actual Price, Delivery Charges, Total Calculated Amount, Discount, Order Date, Shipping address, Billing address, Payment Method used.
+
+	Also show option to download PDF invoice.
+  
+  _PDF Invoice Details:_ Company Details, User Details, Total Actual Price, Delivery Charges, Total Calculated Amount, Discount, Order Date, Shipping address, Billing address, Payment Method used, Payment Date.
+  
+  Send email on order delivery of individual product with order details.
+  
+- #### Wish List Page
+    The user can create a wishlist of products that they want to buy but not right now. These are saved for later.
+    
+    Show list of all products in the wishlist.
+    
+    _Individual Product Details to show:_ Product Image, Name, Price.
+    
+    The user can share the wishlist by generating a unique URL.
+    
+    Give option to Clear WishList.
+    
+    The user can also move all items to cart. If initiated, redirect to the cart page.
+    
+    
