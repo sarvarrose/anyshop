@@ -1,17 +1,27 @@
 import Header from './shared/Header';
 import Footer from './shared/Footer';
-import Banner from './components/Banner';
-import Carousal from './components/Carousal';
+import Home from './pages/Home';
+import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
     <>
       <Header />
-      <Banner />
-      <Carousal title="Deals of the Day" />
-      <Carousal title="Top Selling Products" />
-      <Carousal title="Top Selling Categories" />
-      <Carousal title="New Arrivals" />
+      <Router>
+        <Switch>
+          <Route path="/cart">
+            <Cart />
+          </Route>
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
       <Footer />
     </>
   );
