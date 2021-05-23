@@ -1,4 +1,5 @@
 import Product from './Product';
+import slider_arrow from '../../assets/images/slider-arrow.svg';
 
 function Carousal({ title }) {
   let products = [
@@ -6,21 +7,18 @@ function Carousal({ title }) {
       heading: 'Leather Belt with Brass Buckle',
       description: 'Best Seller in Belts @ 25% flat discount',
       price_description: 'Discounted Price: Rs. XXXX',
-      image_path: '/images/banner.jpg',
       link: '/products',
     },
     {
       heading: 'Leather Belt with Brass Buckle',
       description: 'Best Seller in Belts @ 25% flat discount',
       price_description: 'Discounted Price: Rs. XXXX',
-      image_path: '/images/banner.jpg',
       link: '/products',
     },
     {
       heading: 'Leather Belt with Brass Buckle',
       description: 'Best Seller in Belts @ 25% flat discount',
       price_description: 'Discounted Price: Rs. XXXX',
-      image_path: '/images/banner.jpg',
       link: '/products',
     },
   ];
@@ -49,7 +47,7 @@ function Carousal({ title }) {
             data-bs-target="#carouselExampleControlsss"
             data-bs-slide="prev"
           >
-            <img src="/images/previous-arrow.svg" alt="" />
+            <img src={slider_arrow} alt="" />
             <span className="visually-hidden">Previous</span>
           </button>
           <button
@@ -58,7 +56,7 @@ function Carousal({ title }) {
             data-bs-target="#carouselExampleControlsss"
             data-bs-slide="next"
           >
-            <img src="/images/next-arrow.svg" alt="" />
+            <img src={slider_arrow} alt="" />
             <span className="visually-hidden">Next</span>
           </button>
         </div>

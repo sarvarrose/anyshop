@@ -1,3 +1,8 @@
+import facebook from '../assets/images/facebook.svg';
+import linkedin from '../assets/images/linkedin.svg';
+import twitter from '../assets/images/twitter.svg';
+import youtube from '../assets/images/youtube.svg';
+
 function Footer() {
   return (
     <footer className="footer">
@@ -36,22 +41,22 @@ function Footer() {
               <ul>
                 <li>
                   <a href="#">
-                    <img src="/images/facebook.svg" alt="" />
+                    <img src={facebook} alt="" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="/images/linkedin.svg" alt="" />
+                    <img src={linkedin} alt="" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="/images/twitter.svg" alt="" />
+                    <img src={twitter} alt="" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="/images/youtube.svg" alt="" />
+                    <img src={youtube} alt="" />
                   </a>
                 </li>
               </ul>

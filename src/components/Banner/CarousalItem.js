@@ -1,3 +1,5 @@
+import banner_image from '../../assets/images/banner.jpg';
+
 function CarousalItem({ index, item }) {
   return (
     <div className={`carousel-item${index === 0 ? ' active' : ''}`}>
@@ -15,7 +17,7 @@ function CarousalItem({ index, item }) {
           </div>
         </div>
         <div className="banner_main_right">
-          <img src={item.image_path} alt="banner_img" className="img-fluid" />
+          <img src={banner_image} alt="banner_img" className="img-fluid" />
         </div>
       </div>
     </div>

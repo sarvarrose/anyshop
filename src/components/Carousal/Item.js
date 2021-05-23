@@ -1,13 +1,10 @@
+import product_image from '../../assets/images/product-1.jpeg';
 function Item() {
   return (
     <a className="product" href="#">
       <div className="product_body">
         <div className="product_image">
-          <img
-            src="/images/product-1.jpeg"
-            alt="product_img"
-            className="img-fluid"
-          />
+          <img src={product_image} alt="product_img" className="img-fluid" />
         </div>
         <div className="product_content">
           <span className="p_name">Product Name</span>

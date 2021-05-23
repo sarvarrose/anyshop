@@ -7,21 +7,18 @@ function Banner() {
       heading: 'Leather Belt with Brass Buckle',
       description: 'Best Seller in Belts @ 25% flat discount',
       price_description: 'Discounted Price: Rs. XXXX',
-      image_path: '/images/banner.jpg',
       link: '/products',
     },
     {
       heading: 'Leather Belt with Brass Buckle',
       description: 'Best Seller in Belts @ 25% flat discount',
       price_description: 'Discounted Price: Rs. XXXX',
-      image_path: '/images/banner.jpg',
       link: '/products',
     },
     {
       heading: 'Leather Belt with Brass Buckle',
       description: 'Best Seller in Belts @ 25% flat discount',
       price_description: 'Discounted Price: Rs. XXXX',
-      image_path: '/images/banner.jpg',
       link: '/products',
     },
   ];

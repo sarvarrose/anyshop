@@ -1,3 +1,7 @@
+import bars from '../assets/images/bars.svg';
+import cart_empty from '../assets/images/cart-empty.svg';
+import search from '../assets/images/search.svg';
+
 function Header() {
   return (
     <header className="header">
@@ -10,7 +14,7 @@ function Header() {
             <form className="header_form">
               <input type="text" placeholder="Seach for product / category" />
               <button className="search_btn">
-                <img src="/images/search.svg" alt="" />
+                <img src={search} alt="" />
               </button>
             </form>
           </div>
@@ -25,7 +29,7 @@ function Header() {
                 data-bs-toggle="collapse"
                 type="button"
               >
-                <img src="/images/bars.svg" alt="" />
+                <img src={bars} alt="" />
               </button>
               <span className="logo">
                 <a href="/cart">{process.env.APP_NAME}</a>
@@ -82,7 +86,7 @@ function Header() {
                   </li>
                   <li className="nav-item">
                     <a href="/cart">
-                      <img src="/images/cart-empty.svg" alt="" />
+                      <img src={cart_empty} alt="" />
                     </a>
                   </li>
                 </ul>

@@ -3,7 +3,8 @@ import Footer from './shared/Footer';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import './assets/styles/responsive.css';
 
 function App() {
   return (
