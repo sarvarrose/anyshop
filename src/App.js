@@ -1,13 +1,14 @@
 import Header from './shared/Header';
 import Footer from './shared/Footer';
+import Banner from './components/Banner';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Header />
-      Home Page
+      <Banner />
       <Footer />
-    </div>
+    </>
   );
 }
 
