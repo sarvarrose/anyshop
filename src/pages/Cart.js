@@ -93,9 +93,11 @@ function Cart() {
               <button className="shopping_btn Continue">
                 Continue Shopping
               </button>
-              <button className="shopping_btn Proceed">
-                Proceed to Checkout
-              </button>
+              <a href="/checkout">
+                <button className="shopping_btn Proceed">
+                  Proceed to Checkout
+                </button>
+              </a>
             </div>
           </div>
         </div>
