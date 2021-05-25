@@ -64,15 +64,11 @@ function Cart() {
             <div className="price_d_body">
               <ul>
                 <li>Price</li>
-                <li>
-                  <i className="rupee-sign"></i> 4499.97
-                </li>
+                <li>₹4499.97</li>
               </ul>
               <ul>
                 <li>Discount</li>
-                <li>
-                  <i className="rupee-sign"></i> 1500
-                </li>
+                <li>₹1500</li>
               </ul>
               <ul>
                 <li>Delivery Charges</li>
@@ -85,9 +81,7 @@ function Cart() {
             </div>
             <div className="total_price_sec">
               <span className="total_price">Total Price</span>
-              <span>
-                <i className="rupee-sign"></i> 2999.97
-              </span>
+              <span>₹2999.97</span>
             </div>
             <div className="multi_btn">
               <button className="shopping_btn Continue">

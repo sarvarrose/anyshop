@@ -27,12 +27,8 @@ function CartItem({ item }) {
           </span>
           <span className="item_desc">can span multiple lines</span>
           <div className="price_sec">
-            <span className="fixed_price">
-              <i className="rupee-sign"></i> {item.price}
-            </span>
-            <span className="price">
-              <i className="rupee-sign"></i> {item.actualPrice}
-            </span>
+            <span className="fixed_price">₹{item.price}</span>
+            <span className="price">₹{item.actualPrice}</span>
             <span className="percent_off_price">33% Off</span>
           </div>
           <div className="remove_items">
