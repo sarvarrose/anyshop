@@ -5,6 +5,7 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './assets/styles/responsive.css';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -12,14 +13,17 @@ function App() {
       <Header />
       <Router>
         <Switch>
-          <Route path="/cart">
+          <Route exact path="/cart">
             <Cart />
           </Route>
-          <Route path="/checkout">
+          <Route exact path="/checkout">
             <Checkout />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="*">
+            <NotFound />
           </Route>
         </Switch>
       </Router>
