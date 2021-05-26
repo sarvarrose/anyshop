@@ -6,6 +6,7 @@ import Checkout from './pages/Checkout';
 import NotFound from './pages/NotFound';
 import Auth from './pages/Auth';
 import Categories from './pages/Categories';
+import Product from './pages/Product';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route exact path="/categories">
             <Categories />
+          </Route>
+          <Route exact path="/product">
+            <Product />
           </Route>
           <Route exact path="/">
             <Home />
