@@ -2,19 +2,13 @@
     "env": {
         "browser": true,
         "es2021": true,
-<<<<<<< HEAD
         "jest": true,
         "node": true
     },
     "extends": [
         "eslint:recommended",
         "react-app/jest",
-=======
-        "jest": true
-    },
-    "extends": [
         "eslint:recommended",
->>>>>>> 0b0c466661b7e8bd079ef54521385269d9aece3a
         "plugin:react/recommended",
         "plugin:prettier/recommended"
     ],
@@ -32,7 +26,6 @@
         "react","prettier"
     ],
     "rules": {
-<<<<<<< HEAD
         "react/react-in-jsx-scope": 0,
         "react/prop-types": 0,
         "react/no-unescaped-entities": 0
@@ -41,9 +34,7 @@
     "settings": {
         "react": {
             "version": "detect"
-        }
-=======
+        },
         "react/react-in-jsx-scope": 0
->>>>>>> 0b0c466661b7e8bd079ef54521385269d9aece3a
     }
 }
