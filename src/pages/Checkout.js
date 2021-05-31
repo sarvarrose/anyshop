@@ -21,15 +21,15 @@ function Checkout() {
     },
   ];
   return (
-    <section class="checkout_sec">
-      <div class="container">
-        <div class="shopping_address">
-          <div class="shopping_left">
-            <div class="shopping_header">
-              <h2 class="second_heading">Shipping Address</h2>
-              <div class="select_new_address">
+    <section className="checkout_sec">
+      <div className="container">
+        <div className="shopping_address">
+          <div className="shopping_left">
+            <div className="shopping_header">
+              <h2 className="second_heading">Shipping Address</h2>
+              <div className="select_new_address">
                 <a href="#">
-                  <i class="fas fa-plus"></i> New Address
+                  <i className="fas fa-plus"></i> New Address
                 </a>
               </div>
             </div>
@@ -37,11 +37,11 @@ function Checkout() {
               return <Address key={address.id} address={address} />;
             })}
           </div>
-          <div class="s_price_right">
-            <div class="s_price_header">
+          <div className="s_price_right">
+            <div className="s_price_header">
               <span>Price Details</span>
             </div>
-            <div class="shopping_price_body">
+            <div className="shopping_price_body">
               <ul>
                 <li>Price</li>
                 <li>
@@ -56,7 +56,7 @@ function Checkout() {
               </ul>
               <ul>
                 <li>Delivery Charges</li>
-                <li class="free">FREE</li>
+                <li className="free">FREE</li>
               </ul>
               <ul>
                 <li>Coupon Applied</li>
@@ -65,8 +65,8 @@ function Checkout() {
                 </li>
               </ul>
             </div>
-            <div class="pay_bill_sec">
-              <span class="total_price">Amount Payable</span>
+            <div className="pay_bill_sec">
+              <span className="total_price">Amount Payable</span>
               <span>
                 <i className="rupee-sign"></i> 2999.97
               </span>

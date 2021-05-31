@@ -13,37 +13,37 @@ function Product() {
           <div className="p_slider">
             <div
               id="carouselExampleControlssss"
-              class="carousel slide"
+              className="carousel slide"
               data-bs-ride="carousel"
             >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
+              <div className="carousel-inner">
+                <div className="carousel-item active">
                   <img src={mobile} alt="items" className="img-fluid" />
                 </div>
-                <div class="carousel-item">
+                <div className="carousel-item">
                   <img src={mobile} alt="items" className="img-fluid" />
                 </div>
-                <div class="carousel-item">
+                <div className="carousel-item">
                   <img src={mobile} alt="items" className="img-fluid" />
                 </div>
               </div>
               <button
-                class="carousel-control-prev"
+                className="carousel-control-prev"
                 type="button"
                 data-bs-target="#carouselExampleControlssss"
                 data-bs-slide="prev"
               >
                 <img src={slider_arrow} alt="" />
-                <span class="visually-hidden">Previous</span>
+                <span className="visually-hidden">Previous</span>
               </button>
               <button
-                class="carousel-control-next"
+                className="carousel-control-next"
                 type="button"
                 data-bs-target="#carouselExampleControlssss"
                 data-bs-slide="next"
               >
                 <img src={slider_arrow} alt="" />
-                <span class="visually-hidden">Next</span>
+                <span className="visually-hidden">Next</span>
               </button>
             </div>
             <div className="buy_btn_both">
@@ -63,13 +63,13 @@ function Product() {
                 realme Narzo 30A (Laser Black, 32 GB) (2 GB RAM)
               </span>
               <span className="specl_pric">Special price</span>
-              <span class="fixed_price">
+              <span className="fixed_price">
                 <svg
                   aria-hidden="true"
                   focusable="false"
                   data-prefix="fas"
                   data-icon="rupee-sign"
-                  class="svg-inline--fa fa-rupee-sign fa-w-10"
+                  className="svg-inline--fa fa-rupee-sign fa-w-10"
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 320 512"
@@ -116,12 +116,12 @@ function Product() {
             </div>
             <div className="Quantity_sec">
               <span>Quantity:</span>
-              <div class="item_add_btn">
-                <span class="minus">
+              <div className="item_add_btn">
+                <span className="minus">
                   <img src={minus} alt="" />
                 </span>
-                <span class="dynamic_text">2</span>
-                <span class="plus">
+                <span className="dynamic_text">2</span>
+                <span className="plus">
                   <img src={plus} alt="" />
                 </span>
               </div>

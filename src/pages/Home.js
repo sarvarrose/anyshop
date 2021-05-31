@@ -1,6 +1,6 @@
 import Banner from '../components/Banner';
 import Carousal from '../components/Carousal';
-import "../assets/styles/home.css"
+import '../assets/styles/home.css';
 function Home() {
   return (
     <>
