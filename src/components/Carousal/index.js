@@ -1,25 +1,25 @@
-import Product from './Product';
-import slider_arrow from '../../assets/images/slider-arrow.svg';
+import Product from "./Product";
+import slider_arrow from "../../assets/images/slider-arrow.svg";
 
 function Carousal({ title }) {
   let products = [
     {
-      heading: 'Leather Belt with Brass Buckle',
-      description: 'Best Seller in Belts @ 25% flat discount',
-      price_description: 'Discounted Price: Rs. XXXX',
-      link: '/products',
+      heading: "Leather Belt with Brass Buckle",
+      description: "Best Seller in Belts @ 25% flat discount",
+      price_description: "Discounted Price: Rs. XXXX",
+      link: "/products",
     },
     {
-      heading: 'Leather Belt with Brass Buckle',
-      description: 'Best Seller in Belts @ 25% flat discount',
-      price_description: 'Discounted Price: Rs. XXXX',
-      link: '/products',
+      heading: "Leather Belt with Brass Buckle",
+      description: "Best Seller in Belts @ 25% flat discount",
+      price_description: "Discounted Price: Rs. XXXX",
+      link: "/products",
     },
     {
-      heading: 'Leather Belt with Brass Buckle',
-      description: 'Best Seller in Belts @ 25% flat discount',
-      price_description: 'Discounted Price: Rs. XXXX',
-      link: '/products',
+      heading: "Leather Belt with Brass Buckle",
+      description: "Best Seller in Belts @ 25% flat discount",
+      price_description: "Discounted Price: Rs. XXXX",
+      link: "/products",
     },
   ];
   return (

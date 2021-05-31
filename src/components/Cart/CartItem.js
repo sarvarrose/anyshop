@@ -1,6 +1,6 @@
-import plus from '../../assets/images/plus.svg';
-import minus from '../../assets/images/minus.svg';
-import product_image from '../../assets/images/product-1.jpeg';
+import plus from "../../assets/images/plus.svg";
+import minus from "../../assets/images/minus.svg";
+import product_image from "../../assets/images/product-1.jpeg";
 
 function CartItem({ item }) {
   return (

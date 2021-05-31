@@ -1,25 +1,25 @@
-import CarousalButton from './CarousalButton';
-import CarousalItem from './CarousalItem';
+import CarousalButton from "./CarousalButton";
+import CarousalItem from "./CarousalItem";
 
 function Banner() {
   let items = [
     {
-      heading: 'Leather Belt with Brass Buckle',
-      description: 'Best Seller in Belts @ 25% flat discount',
-      price_description: 'Discounted Price: Rs. XXXX',
-      link: '/products',
+      heading: "Leather Belt with Brass Buckle",
+      description: "Best Seller in Belts @ 25% flat discount",
+      price_description: "Discounted Price: Rs. XXXX",
+      link: "/products",
     },
     {
-      heading: 'Leather Belt with Brass Buckle',
-      description: 'Best Seller in Belts @ 25% flat discount',
-      price_description: 'Discounted Price: Rs. XXXX',
-      link: '/products',
+      heading: "Leather Belt with Brass Buckle",
+      description: "Best Seller in Belts @ 25% flat discount",
+      price_description: "Discounted Price: Rs. XXXX",
+      link: "/products",
     },
     {
-      heading: 'Leather Belt with Brass Buckle',
-      description: 'Best Seller in Belts @ 25% flat discount',
-      price_description: 'Discounted Price: Rs. XXXX',
-      link: '/products',
+      heading: "Leather Belt with Brass Buckle",
+      description: "Best Seller in Belts @ 25% flat discount",
+      price_description: "Discounted Price: Rs. XXXX",
+      link: "/products",
     },
   ];
   return (

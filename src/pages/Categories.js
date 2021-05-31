@@ -1,7 +1,7 @@
-import '../assets/styles/categories.css';
-import { commerce } from '../lib/commerce';
+import "../assets/styles/categories.css";
+import { commerce } from "../lib/commerce";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function Categories() {
   const [products, setProducts] = useState([]);
@@ -38,7 +38,7 @@ function Categories() {
                 fill="currentColor"
                 d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"
               ></path>
-            </svg>{' '}
+            </svg>{" "}
             Filter
           </button>
         </div>
@@ -164,7 +164,7 @@ function Categories() {
           <div className="categories_item">
             <div className="ct_body">
               {fetching
-                ? 'Fetching Products'
+                ? "Fetching Products"
                 : products.map((product) => {
                     return (
                       <div className="ct_items" key={product.id}>
@@ -222,7 +222,7 @@ const fetchProducts = async () => {
       return result;
     })
     .catch((error) => {
-      console.log('There was an error fetching the products', error);
+      console.log("There was an error fetching the products", error);
     });
 };
 export default Categories;

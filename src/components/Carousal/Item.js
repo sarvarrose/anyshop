@@ -1,4 +1,4 @@
-import product_image from '../../assets/images/product-1.jpeg';
+import product_image from "../../assets/images/product-1.jpeg";
 function Item() {
   return (
     <a className="product" href="#">

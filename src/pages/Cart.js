@@ -1,28 +1,28 @@
-import CartItem from '../components/Cart/CartItem';
-import '../assets/styles/cart.css';
+import CartItem from "../components/Cart/CartItem";
+import "../assets/styles/cart.css";
 
 function Cart() {
   let cart = {
     items: [
       {
         productId: 1,
-        name: 'Test Product 1',
-        price: '999.99',
-        actualPrice: '1299.99',
+        name: "Test Product 1",
+        price: "999.99",
+        actualPrice: "1299.99",
         quantity: 2,
       },
       {
         productId: 2,
-        name: 'Test Product 2',
-        price: '499.99',
-        actualPrice: '649.99',
+        name: "Test Product 2",
+        price: "499.99",
+        actualPrice: "649.99",
         quantity: 1,
       },
       {
         productId: 3,
-        name: 'Test Product 3',
-        price: '256',
-        actualPrice: '345',
+        name: "Test Product 3",
+        price: "256",
+        actualPrice: "345",
         quantity: 1,
       },
     ],
@@ -36,7 +36,7 @@ function Cart() {
               <h2 className="second_heading">
                 Shopping Cart (
                 {cart.items.length === 1
-                  ? '1 item'
+                  ? "1 item"
                   : `${cart.items.length} items`}
                 )
               </h2>

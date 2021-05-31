@@ -1,15 +1,15 @@
 function Address({ address }) {
   return (
-    <div class="select_address">
-      <div class="user_details">
-        <span class="user_name">{address.name}</span>
-        <span class="user_landmark">{address.address}</span>
+    <div className="select_address">
+      <div className="user_details">
+        <span className="user_name">{address.name}</span>
+        <span className="user_landmark">{address.address}</span>
       </div>
-      <div class="select_btn_add">
+      <div className="select_btn_add">
         {address.default ? (
-          <button class="select_btn selected_btn">Selected</button>
+          <button className="select_btn selected_btn">Selected</button>
         ) : (
-          <button class="select_btn">Select</button>
+          <button className="select_btn">Select</button>
         )}
       </div>
     </div>

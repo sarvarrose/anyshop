@@ -1,6 +1,6 @@
-import bars from '../assets/images/bars.svg';
-import cart_empty from '../assets/images/cart-empty.svg';
-import search from '../assets/images/search.svg';
+import bars from "../assets/images/bars.svg";
+import cart_empty from "../assets/images/cart-empty.svg";
+import search from "../assets/images/search.svg";
 
 function Header() {
   return (

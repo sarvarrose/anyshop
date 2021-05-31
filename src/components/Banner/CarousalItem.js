@@ -1,8 +1,8 @@
-import banner_image from '../../assets/images/banner.jpg';
+import banner_image from "../../assets/images/banner.jpg";
 
 function CarousalItem({ index, item }) {
   return (
-    <div className={`carousel-item${index === 0 ? ' active' : ''}`}>
+    <div className={`carousel-item${index === 0 ? " active" : ""}`}>
       <div className="banner_main">
         <div className="banner_main_left">
           <h1 className="heading_first">{item.heading}</h1>
