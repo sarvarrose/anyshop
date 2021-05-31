@@ -12,8 +12,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 function App() {
   return (
     <>
-      <Header />
       <Router>
+        <Header />
         <Switch>
           <Route exact path="/cart">
             <Cart />
@@ -37,8 +37,8 @@ function App() {
             <NotFound />
           </Route>
         </Switch>
+        <Footer />
       </Router>
-      <Footer />
     </>
   );
 }
