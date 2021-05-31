@@ -8,6 +8,7 @@ import Auth from './pages/Auth';
 import Categories from './pages/Categories';
 import Product from './pages/Product';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import StaticPage from './pages/StaticPage';
 
 function App() {
   return (
@@ -29,6 +30,21 @@ function App() {
           </Route>
           <Route exact path="/product">
             <Product />
+          </Route>
+          <Route exact path="/sitemap">
+            <StaticPage name="Sitemap" />
+          </Route>
+          <Route exact path="/about-us">
+            <StaticPage name="About Us" />
+          </Route>
+          <Route exact path="/contact-us">
+            <StaticPage name="Contact Us" />
+          </Route>
+          <Route exact path="/privacy-policy">
+            <StaticPage name="Privacy Policy" />
+          </Route>
+          <Route exact path="/refund-policy">
+            <StaticPage name="Refund Policy" />
           </Route>
           <Route exact path="/">
             <Home />

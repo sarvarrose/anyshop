@@ -16,7 +16,7 @@ function Footer() {
             <span className="f_link_header">Quick Links</span>
             <ul>
               <Link to="/">Home</Link>
-              <a href="/sitemap">Sitemap</a>
+              <Link to="/sitemap">Sitemap</Link>
             </ul>
           </div>
           <div className="footer_item">
