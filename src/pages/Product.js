@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import '../assets/styles/product.css';
 import slider_arrow from '../assets/images/slider-arrow.svg';
 import minus from '../assets/images/minus.svg';
