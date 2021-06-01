@@ -92,7 +92,10 @@ function Product() {
                 </button>
               </div>
               <div className="buy_btn_both">
-                <a href="/" className="goto_cart purchase_btn">
+                <a
+                  className="goto_cart purchase_btn"
+                  onClick={() => handleAddToCart(id, quantity)}
+                >
                   ADD TO CART
                 </a>
                 <a href="/" className="buy_now purchase_btn">
@@ -171,6 +174,17 @@ const fetchProduct = async (productId) => {
   return await commerce.products.retrieve(productId).then((result) => {
     return result;
   });
+};
+
+const handleAddToCart = (productId, quantity) => {
+  commerce.cart
+    .add(productId, quantity)
+    .then((item) => {
+      this.setState({ cart: item.cart });
+    })
+    .catch((error) => {
+      console.error('There was an error adding the item to the cart', error);
+    });
 };
 
 export default Product;
