@@ -7,6 +7,7 @@ import '../assets/styles/cart.css';
 import { commerce } from '../lib/commerce';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import exportFromJSON from 'export-from-json';
 
 function Cart() {
   //   let cart = {
@@ -41,6 +42,15 @@ function Cart() {
     },
   });
   const [fetching, setFetching] = useState(true);
+
+  const ExportToExcel = () => {
+    console.log('Exporting Cart Items');
+    exportFromJSON({
+      data: cart.line_items,
+      fileName: cart.id + '.csv',
+      exportType: 'csv',
+    });
+  };
 
   const handleUpdateCartQty = (lineItemId, quantity) => {
     return commerce.cart
@@ -100,19 +110,31 @@ function Cart() {
             <div className="product_details_header">
               <h2 className="second_heading">
                 Shopping Cart (
-                {cart.total_items === 1
+                {cart.total_unique_items === 1
                   ? '1 item'
                   : `${cart.total_unique_items} items`}
                 )
               </h2>
               <div className="details_in_right">
-                <span>
+                <span
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Move cart to WishList"
+                >
                   <img src={heart} alt="heart" />
                 </span>
-                <span>
+                <span
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Export Cart Items"
+                  onClick={() => ExportToExcel()}
+                >
                   <img src={share} alt="share" />
                 </span>
                 <span
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Empty Cart"
                   onClick={() => {
                     handleEmptyCart();
                   }}
