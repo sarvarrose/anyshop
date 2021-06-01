@@ -65,6 +65,10 @@ function Checkout() {
                 </li>
               </ul>
             </div>
+            <div className="promo_code_sec">
+              <input type="text" placeholder="Enter Coupon Code" />
+              <button className="apply_btn">Apply</button>
+            </div>
             <div className="pay_bill_sec">
               <span className="total_price">Amount Payable</span>
               <span>

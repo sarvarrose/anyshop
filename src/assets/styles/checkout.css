@@ -100,3 +100,19 @@
 .pay_bill_sec .total_price {
   font-weight: 600;
 }
+
+.promo_code_sec input {
+  border: none;
+  outline: none;
+}
+.promo_code_sec .apply_btn {
+  border: none;
+  outline: none;
+  background: #dcdada;
+  position: absolute;
+  right: 9px;
+}
+.free {
+  color: #388e3c;
+  font-weight: 600;
+}
