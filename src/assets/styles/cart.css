@@ -84,6 +84,7 @@
   color: #333;
   text-decoration: none;
   margin-right: 20px;
+  cursor: pointer;
 }
 .remove_items a:last-child {
   margin: 0;
@@ -140,10 +141,7 @@
 .price_details .price_d_body > ul > li > i {
   font-size: 14px;
 }
-.price_details .price_d_body ul > .free {
-  color: #388e3c;
-  font-weight: 600;
-}
+
 .promo_code_sec {
   display: flex;
   justify-content: space-between;
@@ -153,17 +151,7 @@
   position: relative;
   width: 100%;
 }
-.promo_code_sec input {
-  border: none;
-  outline: none;
-}
-.promo_code_sec .apply_btn {
-  border: none;
-  outline: none;
-  background: #dcdada;
-  position: absolute;
-  right: 9px;
-}
+
 .total_price_sec {
   border-top: 1px solid var(--gray);
   margin: 20px 0 0 0;
@@ -171,8 +159,6 @@
   list-style: none;
   display: flex;
   justify-content: space-between;
-}
-.total_price_sec .total_price {
   font-weight: 600;
 }
 .multi_btn {
@@ -181,6 +167,18 @@
   margin: 45px 0 0 0;
 }
 .multi_btn .shopping_btn {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  margin: 0;
+  padding: 14px 11px;
+  cursor: pointer;
+  color: var(--white);
+  font-weight: 500;
+  transition: all 0.2s;
+  border-radius: 2px;
+}
+.Continue {
   border: none;
   outline: none;
   font-size: 14px;
