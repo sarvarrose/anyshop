@@ -1,6 +1,25 @@
-function Filter({ filters }) {
+import { useState } from 'react';
+
+function Filter({ filters, priceRange }) {
+  let [range, setRange] = useState(priceRange.max);
   return (
     <div className="filter_sec">
+      <label className="form-label">
+        Price Range (
+        {`${priceRange.min} - ${
+          range !== priceRange.max ? range : priceRange.max
+        }`}
+        )
+      </label>
+      <input
+        type="range"
+        className="form-range"
+        min="0"
+        max={priceRange.max}
+        step="10"
+        value={range}
+        onChange={(e) => setRange(e.target.value)}
+      ></input>
       {Object.keys(filters).map((key) => {
         return (
           <div className="filter_item" key={key}>
