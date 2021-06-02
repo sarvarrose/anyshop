@@ -37,8 +37,8 @@ function Footer() {
         <div className="copyRight">
           <div className="copyRight_body">
             <span>
-              ©<Link to="/privacy-policy">AnyShop</Link>{' '}
-              {new Date().getFullYear()}. All Rights Reserved.
+              ©<Link to="/">AnyShop</Link> {new Date().getFullYear()}. All
+              Rights Reserved.
             </span>
             <div className="social_media">
               <span>Follow us:</span>
