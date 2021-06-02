@@ -5,7 +5,7 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import NotFound from './pages/NotFound';
 import Auth from './pages/Auth';
-import Categories from './pages/Categories';
+import Category from './pages/Category';
 import Product from './pages/Product';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import StaticPage from './pages/StaticPage';
@@ -25,8 +25,8 @@ function App() {
           <Route exact path="/auth">
             <Auth />
           </Route>
-          <Route exact path="/categories">
-            <Categories />
+          <Route exact path="/category/:category">
+            <Category />
           </Route>
           <Route exact path="/product/:id">
             <Product />

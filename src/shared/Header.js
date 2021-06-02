@@ -45,8 +45,36 @@ function Header() {
               </span>
               <div className="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav">
-                  <li className="nav-item">
-                    <Link to="/categories">Categories</Link>
+                  <li className="nav-item dropdown">
+                    <Link
+                      to="/"
+                      aria-expanded="false"
+                      className="dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      id="navbarDropdownMenuLink"
+                      role="button"
+                    >
+                      Categories
+                      <img src={down} alt="" />
+                    </Link>
+
+                    <ul
+                      aria-labelledby="navbarDropdownMenuLink"
+                      className="dropdown-menu"
+                    >
+                      <li>
+                        <Link to={'/category/shoes'}>Shoes</Link>
+                      </li>
+                      <li>
+                        <Link to={'/category/jackets'}>Jackets</Link>
+                      </li>
+                      <li>
+                        <Link to={'/category/belts'}>Belts</Link>
+                      </li>
+                      <li>
+                        <Link to={'/category/bags'}>bags</Link>
+                      </li>
+                    </ul>
                   </li>
                   {!isLoggedIn ? (
                     <li>
