@@ -1,21 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-function Filter({ filters, priceRange }) {
-  let [range, setRange] = useState(priceRange.max);
+function Filter({ filters, priceMax }) {
+  const [range, setRange] = useState(0);
+
+  useEffect(async () => {
+    setRange(priceMax);
+  }, [priceMax]);
   return (
     <div className="filter_sec">
-      <label className="form-label">
-        Price Range (
-        {`${priceRange.min} - ${
-          range !== priceRange.max ? range : priceRange.max
-        }`}
-        )
-      </label>
+      <label className="form-label">Price Range (0 - {range})</label>
       <input
         type="range"
         className="form-range"
         min="0"
-        max={priceRange.max}
+        max={priceMax}
         step="10"
         value={range}
         onChange={(e) => setRange(e.target.value)}

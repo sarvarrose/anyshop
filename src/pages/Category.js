@@ -6,10 +6,11 @@ import { useParams, Link } from 'react-router-dom';
 import Filter from '../components/Category/Filter';
 
 function Category() {
-  const category = useParams().category;
+  const { category } = useParams();
   const [products, setProducts] = useState([]);
   const [fetching, setFetching] = useState(true);
   const [filters, setFilters] = useState({});
+  const [priceMax, setPriceMax] = useState(0);
   useEffect(async () => {
     await fetchProducts().then((products) => {
       setProducts(products);
@@ -21,6 +22,11 @@ function Category() {
     let filtersObj = {};
     if (products.length) {
       products.forEach((product) => {
+        console.log(product);
+        let productPriceRounded = Math.ceil(product.price.formatted / 10) * 10;
+        if (priceMax < productPriceRounded) {
+          setPriceMax(productPriceRounded);
+        }
         product.variant_groups.forEach((variant) => {
           let variantOptions = [];
           variant.options.forEach((option) => {
@@ -39,7 +45,6 @@ function Category() {
         });
       });
       setFilters({ ...filtersObj });
-      console.log(filters);
     }
   }, [products]);
 
@@ -87,7 +92,7 @@ function Category() {
           </button>
         </div>
         <div className="categories">
-          <Filter filters={filters} />
+          <Filter filters={filters} priceMax={priceMax} />
           <div className="categories_item">
             <div className="ct_body">
               {fetching
