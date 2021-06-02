@@ -4,25 +4,37 @@ import React, { useState, useEffect } from 'react';
 // import { Link } from 'react-router-dom';
 import { useParams, Link } from 'react-router-dom';
 import Filter from '../components/Category/Filter';
-
 function Category() {
+  const currentLocation = location.pathname;
   const { category } = useParams();
   const [products, setProducts] = useState([]);
   const [fetching, setFetching] = useState(true);
   const [filters, setFilters] = useState({});
   const [priceMax, setPriceMax] = useState(0);
+  const handleToggle = async () => {
+    console.log('route changed', category);
+    setFetching(true);
+    setProducts([]);
+    await fetchProducts().then((products) => {
+      setProducts(products);
+      setFetching(false);
+    });
+  };
   useEffect(async () => {
     await fetchProducts().then((products) => {
       setProducts(products);
       setFetching(false);
-      //   console.log(products);
     });
   }, []);
+
+  useEffect(() => {
+    handleToggle();
+  }, [currentLocation]);
   useEffect(() => {
     let filtersObj = {};
     if (products.length) {
       products.forEach((product) => {
-        console.log(product);
+        // console.log(product);
         let productPriceRounded = Math.ceil(product.price.formatted / 10) * 10;
         if (priceMax < productPriceRounded) {
           setPriceMax(productPriceRounded);
