@@ -72,7 +72,10 @@ function Header() {
                         <Link to={'/category/belts'}>Belts</Link>
                       </li>
                       <li>
-                        <Link to={'/category/bags'}>bags</Link>
+                        <Link to={'/category/bags'}>Bags</Link>
+                      </li>
+                      <li>
+                        <Link to={'/category/wallets'}>Wallets</Link>
                       </li>
                     </ul>
                   </li>
