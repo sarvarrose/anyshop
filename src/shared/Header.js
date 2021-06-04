@@ -1,9 +1,17 @@
 import bars from '../assets/images/bars.svg';
 import cart_empty from '../assets/images/cart-empty.svg';
-import search from '../assets/images/search.svg';
 import down from '../assets/images/down.svg';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import algoliasearch from 'algoliasearch/lite';
+import { getAlgoliaResults } from '@algolia/autocomplete-js';
+import { Autocomplete } from '../lib/autocomplete.jsx';
+const searchClient = algoliasearch(
+  process.env.REACT_APP_APPLICATION_ID,
+  process.env.REACT_APP_API_KEY,
+);
+import '@algolia/autocomplete-theme-classic';
+
 function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const loginUser = () => {
@@ -12,6 +20,7 @@ function Header() {
   const logoutUser = () => {
     setIsLoggedIn(false);
   };
+
   return (
     <header className="header">
       <div className="container">
@@ -20,12 +29,37 @@ function Header() {
             <span className="logo">
               <Link to="/">{process.env.REACT_APP_NAME}</Link>
             </span>
-            <form className="header_form">
-              <input type="text" placeholder="Seach for product / category" />
-              <button className="search_btn">
-                <img src={search} alt="" />
-              </button>
-            </form>
+            <Autocomplete
+              openOnFocus={true}
+              getSources={({ query }) => [
+                {
+                  sourceId: 'products',
+                  getItems() {
+                    return getAlgoliaResults({
+                      searchClient,
+                      queries: [
+                        {
+                          indexName: 'anyshop',
+                          query,
+                        },
+                      ],
+                    });
+                  },
+                  templates: {
+                    item({ item, components }) {
+                      console.log(item, components);
+                      return (
+                        <div>
+                          <a href={'/product/' + item.id}>
+                            <p>{item.name}</p>
+                          </a>
+                        </div>
+                      );
+                    },
+                  },
+                },
+              ]}
+            />
           </div>
           <div className="header_body_right">
             <nav className="navbar-expand-lg ">
