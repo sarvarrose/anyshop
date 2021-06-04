@@ -9,6 +9,7 @@ import Category from './pages/Category';
 import Product from './pages/Product';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import StaticPage from './pages/StaticPage';
+import Search from './pages/Search';
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route exact path="/product/:id">
             <Product />
+          </Route>
+          <Route exact path="/search">
+            <Search />
           </Route>
           <Route exact path="/sitemap">
             <StaticPage name="Sitemap" />
