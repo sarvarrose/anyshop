@@ -54,7 +54,7 @@ function Product() {
   const handleAddToCart = (productId, quantity) => {
     console.log(product);
     commerce.cart
-      .add(productId, quantity, variance)
+      .add(productId, quantity)
       .then((item) => {
         this.setState({ cart: item.cart });
       })

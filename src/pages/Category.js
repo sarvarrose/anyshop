@@ -36,7 +36,6 @@ function Category() {
     });
     await fetchAllProducts().then((products) => {
       let algoProd = algo;
-      console.log('AAAAAAAAAAAAAAA');
       products.forEach((product) => {
         let tempProd = {
           id: product.id,

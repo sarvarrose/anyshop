@@ -190,7 +190,7 @@ function Cart() {
                   Continue Shopping
                 </button>
               </Link>
-              {cart.total_items > 0 ?? (
+              {cart.total_items > 0 && (
                 <Link to={'/checkout'}>
                   <button className="shopping_btn Proceed">
                     Proceed to Checkout

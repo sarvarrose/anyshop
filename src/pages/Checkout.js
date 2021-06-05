@@ -1,15 +1,10 @@
 import '../assets/styles/checkout.css';
 import Address from '../components/Checkout/Address';
 import { commerce } from '../lib/commerce';
-// import useFetchCommerce from '../hooks/useFetchCommerce';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 function Checkout() {
-  // const url = 'https://api.chec.io/v1/discounts';
-  // const discounts = useFetchCommerce(url);
-  // console.log(discounts);
-
   const [cart, setCart] = useState({
     total_unique_items: 0,
     subtotal: {
@@ -18,41 +13,6 @@ function Checkout() {
     line_items: [],
   });
 
-  const getDiscounts = async () => {
-    await fetch('https://api.chec.io/v1/discounts', {
-      method: 'GET',
-      headers: {
-        'X-Authorization': process.env.REACT_APP_CHEC_PUBLIC_KEY,
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-    })
-      .then((response) => response.json())
-      .then((json) => console.log(json));
-  };
-  //   const [checkout, setCheckout] = useState({
-  //     firstName: 'Jane',
-  //     lastName: 'Doe',
-  //     email: 'janedoe@email.com',
-  //     // Shipping details
-  //     shippingName: 'Jane Doe',
-  //     shippingStreet: '123 Fake St',
-  //     shippingCity: 'San Francisco',
-  //     shippingStateProvince: 'CA',
-  //     shippingPostalZipCode: '94107',
-  //     shippingCountry: 'US',
-  //     // Payment details
-  //     cardNum: '4242 4242 4242 4242',
-  //     expMonth: '11',
-  //     expYear: '2023',
-  //     ccv: '123',
-  //     billingPostalZipcode: '94107',
-  //     // Shipping and fulfillment data
-  //     shippingCountries: {},
-  //     shippingSubdivisions: {},
-  //     shippingOptions: [],
-  //     shippingOption: '',
-  //   });
   const [fetching, setFetching] = useState(true);
   const [checkoutToken, setCheckoutToken] = useState('');
   const generateCheckoutToken = () => {
@@ -61,7 +21,6 @@ function Checkout() {
         .generateToken(cart.id, { type: 'cart' })
         .then((token) => {
           setCheckoutToken(token);
-          getDiscounts();
         })
         .catch((error) => {
           console.log('There was an error in generating a token', error);
@@ -149,10 +108,6 @@ function Checkout() {
                 <li>{cart.subtotal.formatted_with_symbol}</li>
               </ul>
               <ul>
-                <li>Discount</li>
-                <li>{cart.subtotal.formatted_with_symbol}</li>
-              </ul>
-              <ul>
                 <li>Delivery Charges</li>
                 <li className="free">FREE</li>
               </ul>
@@ -169,6 +124,11 @@ function Checkout() {
               <span className="total_price">Amount Payable</span>
               <span>{cart.subtotal.formatted_with_symbol}</span>
             </div>
+            <a href={cart.hosted_checkout_url} target="_blank" rel="noreferrer">
+              <button className="shopping_btn Continue">
+                Complete Checkout
+              </button>
+            </a>
           </div>
         </div>
       </div>

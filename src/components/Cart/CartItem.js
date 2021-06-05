@@ -1,6 +1,7 @@
 import plus from '../../assets/images/plus.svg';
 import minus from '../../assets/images/minus.svg';
-// import product_image from '../../assets/images/product-1.jpeg';
+
+import { Link } from 'react-router-dom';
 
 function CartItem({ item, handleUpdateCartQty, handleRemoveFromCart }) {
   console.log(item);
@@ -8,9 +9,15 @@ function CartItem({ item, handleUpdateCartQty, handleRemoveFromCart }) {
     <div className="shopping_body">
       <div className="product_items">
         <div className="item_img_btn">
-          <div className="item_img">
-            <img src={item.media.source} className="img-fluid" alt="cartImg" />
-          </div>
+          <Link to={'/product/' + item.id}>
+            <div className="item_img">
+              <img
+                src={item.media.source}
+                className="img-fluid"
+                alt="cartImg"
+              />
+            </div>
+          </Link>
           <div className="item_add_btn">
             <span
               className="minus"
@@ -28,17 +35,12 @@ function CartItem({ item, handleUpdateCartQty, handleRemoveFromCart }) {
           </div>
         </div>
         <div className="item_content">
-          <span className="item_title">{item.name}</span>
-          <span className="item_desc">
-            This is a sample product description that
-          </span>
-          <span className="item_desc">can span multiple lines</span>
+          <Link to={'/product/' + item.id}>
+            <span className="item_title">{item.name}</span>
+          </Link>
           <div className="price_sec">
             <span className="fixed_price">
               {item.price.formatted_with_symbol}
-            </span>
-            <span className="percent_off_price">
-              {item.line_total.formatted_with_symbol}
             </span>
           </div>
           <div className="remove_items">
