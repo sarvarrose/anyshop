@@ -11,6 +11,9 @@ export function Autocomplete(props) {
     }
 
     const search = autocomplete({
+      renderNoResults({ children }, root) {
+        render('No results', root);
+      },
       container: containerRef.current,
       renderer: { createElement, Fragment },
       render({ children }, root) {

@@ -1,25 +1,77 @@
 import bars from '../assets/images/bars.svg';
 import cart_empty from '../assets/images/cart-empty.svg';
 import down from '../assets/images/down.svg';
-import { Link } from 'react-router-dom';
+
 import { useState } from 'react';
-import algoliasearch from 'algoliasearch/lite';
+
+import { Link } from 'react-router-dom';
 import { getAlgoliaResults } from '@algolia/autocomplete-js';
-import { Autocomplete } from '../lib/autocomplete.jsx';
-const searchClient = algoliasearch(
-  process.env.REACT_APP_APPLICATION_ID,
-  process.env.REACT_APP_API_KEY,
-);
 import '@algolia/autocomplete-theme-classic';
+
+import searchClient from '../lib/searchClient';
+import { Autocomplete } from '../lib/autocomplete.jsx';
 
 function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
+
   const loginUser = () => {
     setIsLoggedIn(true);
   };
+
   const logoutUser = () => {
     setIsLoggedIn(false);
   };
+
+  const algoliaResults = (query) => {
+    return [
+      {
+        sourceId: 'products',
+        getItems() {
+          return getAlgoliaResults({
+            searchClient,
+            queries: [
+              {
+                indexName: 'anyshop',
+                query,
+              },
+            ],
+          });
+        },
+        templates: {
+          item(result) {
+            console.log(result);
+            return <AutocompleteItem item={result.item} />;
+          },
+        },
+      },
+    ];
+  };
+
+  const AutocompleteItem = ({ item }) => {
+    return (
+      <div>
+        <a href={'/product/' + item.id}>
+          <img src={item.image} />
+          <p>
+            {item.name} - {item.formatted_price}
+          </p>
+        </a>
+      </div>
+    );
+  };
+
+  const LoggedOut = (
+    <li>
+      <button
+        className="header_btn"
+        onClick={() => {
+          loginUser();
+        }}
+      >
+        Login
+      </button>
+    </li>
+  );
 
   return (
     <header className="header">
@@ -30,35 +82,9 @@ function Header() {
               <Link to="/">{process.env.REACT_APP_NAME}</Link>
             </span>
             <Autocomplete
+              noOptionsText={'No Results'}
               openOnFocus={true}
-              getSources={({ query }) => [
-                {
-                  sourceId: 'products',
-                  getItems() {
-                    return getAlgoliaResults({
-                      searchClient,
-                      queries: [
-                        {
-                          indexName: 'anyshop',
-                          query,
-                        },
-                      ],
-                    });
-                  },
-                  templates: {
-                    item({ item, components }) {
-                      console.log(item, components);
-                      return (
-                        <div>
-                          <a href={'/product/' + item.id}>
-                            <p>{item.name}</p>
-                          </a>
-                        </div>
-                      );
-                    },
-                  },
-                },
-              ]}
+              getSources={({ query }) => algoliaResults(query)}
             />
           </div>
           <div className="header_body_right">
@@ -111,16 +137,7 @@ function Header() {
                     </ul>
                   </li>
                   {!isLoggedIn ? (
-                    <li>
-                      <button
-                        className="header_btn"
-                        onClick={() => {
-                          loginUser();
-                        }}
-                      >
-                        Login
-                      </button>
-                    </li>
+                    <LoggedOut />
                   ) : (
                     <>
                       <li className="nav-item dropdown">
