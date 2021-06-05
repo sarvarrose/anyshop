@@ -5,6 +5,10 @@
   width: 100%;
   margin: 20px 0;
 }
+
+.item p {
+  margin: 23px 0 0 0;
+  }
 .products .p_text {
   width: calc(100% - 385px);
   background: #fff;
@@ -171,3 +175,30 @@
 .selected {
   background-color: grey;
 }
+
+
+/* related  */
+.related {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.related .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #f0f0f0;
+  margin: 9px;
+  width: 260px;
+  background: #fff;
+}
+.related .item img{
+  width: 171px;
+  max-height: 400px;
+}
+
+
+
+
+

@@ -10,6 +10,7 @@ import Product from './pages/Product';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import StaticPage from './pages/StaticPage';
 import Search from './pages/Search';
+import Orders from './pages/Orders';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route exact path="/auth">
             <Auth />
+          </Route>
+          <Route exact path="/account/orders">
+            <Orders />
           </Route>
           <Route exact path="/category/:category">
             <Category />

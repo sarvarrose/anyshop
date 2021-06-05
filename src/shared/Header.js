@@ -67,6 +67,7 @@ function Header() {
               <Link to="/">{process.env.REACT_APP_NAME}</Link>
             </span>
             <Autocomplete
+              debug={true}
               noOptionsText={'No Results'}
               openOnFocus={true}
               getSources={({ query }) => algoliaResults(query)}
@@ -154,9 +155,6 @@ function Header() {
                           aria-labelledby="navbarDropdownMenuLink"
                           className="dropdown-menu"
                         >
-                          <li>
-                            <Link to={'/account'}>My Profile</Link>
-                          </li>
                           <li>
                             <Link to={'/account/orders'}>Orders</Link>
                           </li>

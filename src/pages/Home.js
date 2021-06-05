@@ -99,10 +99,34 @@ function Home() {
           </div>
           <div className="container">
             <div className="row">
-              <div className="col">Shoes</div>
-              <div className="col">Jackets</div>
-              <div className="col">Bag</div>
-              <div className="col">Wallets</div>
+              <div className="card col">
+                <Link to={'/category/shoes'}>
+                  <div className="card-body">
+                    <h5 className="card-title">Shoes</h5>
+                  </div>
+                </Link>
+              </div>
+              <div className="card col">
+                <Link to={'/category/wallets'}>
+                  <div className="card-body">
+                    <h5 className="card-title">Wallets</h5>
+                  </div>
+                </Link>
+              </div>
+              <div className="card col">
+                <Link to={'/category/jackets'}>
+                  <div className="card-body">
+                    <h5 className="card-title">Jackets</h5>
+                  </div>
+                </Link>
+              </div>
+              <div className="card col">
+                <Link to={'/category/bags'}>
+                  <div className="card-body">
+                    <h5 className="card-title">Bags</h5>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

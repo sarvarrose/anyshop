@@ -1,4 +1,3 @@
-import heart from '../assets/images/heart.svg';
 import share from '../assets/images/share.svg';
 import trash from '../assets/images/trash.svg';
 
@@ -10,31 +9,6 @@ import { Link } from 'react-router-dom';
 import exportFromJSON from 'export-from-json';
 
 function Cart() {
-  //   let cart = {
-  //     items: [
-  //       {
-  //         productId: 1,
-  //         name: 'Test Product 1',
-  //         price: '999.99',
-  //         actualPrice: '1299.99',
-  //         quantity: 2,
-  //       },
-  //       {
-  //         productId: 2,
-  //         name: 'Test Product 2',
-  //         price: '499.99',
-  //         actualPrice: '649.99',
-  //         quantity: 1,
-  //       },
-  //       {
-  //         productId: 3,
-  //         name: 'Test Product 3',
-  //         price: '256',
-  //         actualPrice: '345',
-  //         quantity: 1,
-  //       },
-  //     ],
-  //   };
   const [cart, setCart] = useState({
     total_unique_items: 0,
     subtotal: {
