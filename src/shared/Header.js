@@ -58,19 +58,6 @@ function Header() {
     );
   };
 
-  const LoggedOut = (
-    <li>
-      <button
-        className="header_btn"
-        onClick={() => {
-          loginUser();
-        }}
-      >
-        Login
-      </button>
-    </li>
-  );
-
   return (
     <header className="header">
       <div className="container">
@@ -121,6 +108,10 @@ function Header() {
                       className="dropdown-menu"
                     >
                       <li>
+                        <Link to={'/search'}>Search All Categories</Link>
+                      </li>
+                      <hr />
+                      <li>
                         <Link to={'/category/shoes'}>Shoes</Link>
                       </li>
                       <li>
@@ -135,7 +126,16 @@ function Header() {
                     </ul>
                   </li>
                   {!isLoggedIn ? (
-                    <LoggedOut />
+                    <li>
+                      <button
+                        className="header_btn"
+                        onClick={() => {
+                          loginUser();
+                        }}
+                      >
+                        Login
+                      </button>
+                    </li>
                   ) : (
                     <>
                       <li className="nav-item dropdown">
