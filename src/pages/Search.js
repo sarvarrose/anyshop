@@ -1,5 +1,7 @@
 import '../assets/styles/search.css';
 
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
+
 import { Link } from 'react-router-dom';
 import {
   InstantSearch,
