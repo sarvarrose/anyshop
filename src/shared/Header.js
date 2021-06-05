@@ -39,7 +39,6 @@ function Header() {
         },
         templates: {
           item(result) {
-            console.log(result);
             return <AutocompleteItem item={result.item} />;
           },
         },
