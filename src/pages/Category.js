@@ -11,6 +11,7 @@ function Category() {
   const [fetching, setFetching] = useState(true);
   const [filters, setFilters] = useState({});
   const [priceMax, setPriceMax] = useState(0);
+  const [algo, setAlgo] = useState([]);
   const handleToggle = async () => {
     console.log('route changed', category);
     setFetching(true);
@@ -24,6 +25,24 @@ function Category() {
     await fetchProducts().then((products) => {
       setProducts(products);
       setFetching(false);
+    });
+    await fetchAllProducts().then((products) => {
+      let algoProd = algo;
+      console.log('AAAAAAAAAAAAAAA');
+      products.forEach((product) => {
+        let tempProd = {
+          id: product.id,
+          name: product.name,
+          price: product.price.raw,
+          category: product.categories[0].name,
+          image: product.assets[0].url,
+        };
+        algoProd.push(tempProd);
+      });
+      console.log(algoProd);
+      console.log(products);
+      setAlgo(algoProd);
+      //   setFetching(false);
     });
   }, []);
 
@@ -73,6 +92,16 @@ function Category() {
       });
   };
 
+  const fetchAllProducts = async () => {
+    return await commerce.products
+      .list()
+      .then((products) => {
+        return products.data;
+      })
+      .catch((error) => {
+        console.log('There was an error fetching the products', error);
+      });
+  };
   return (
     <>
       <div className="container">

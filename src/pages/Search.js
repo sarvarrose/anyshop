@@ -1,5 +1,6 @@
 import '../assets/styles/search.css';
-import algoliasearch from 'algoliasearch/lite';
+
+import { Link } from 'react-router-dom';
 import {
   InstantSearch,
   Hits,
@@ -10,12 +11,8 @@ import {
   RangeInput,
   ClearRefinements,
 } from 'react-instantsearch-dom';
-import { Link } from 'react-router-dom';
 
-const searchClient = algoliasearch(
-  process.env.REACT_APP_APPLICATION_ID,
-  process.env.REACT_APP_API_KEY,
-);
+import searchClient from '../lib/searchClient';
 
 function Search() {
   function Hit({ hit }) {
@@ -40,6 +37,7 @@ function Search() {
       </div>
     );
   }
+
   return (
     <InstantSearch searchClient={searchClient} indexName="anyshop">
       <div className="search-panel">
