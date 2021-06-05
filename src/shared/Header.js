@@ -1,11 +1,11 @@
 import bars from '../assets/images/bars.svg';
 import cart_empty from '../assets/images/cart-empty.svg';
 import down from '../assets/images/down.svg';
+import '../assets/styles/algolia.css';
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getAlgoliaResults } from '@algolia/autocomplete-js';
-import '@algolia/autocomplete-theme-classic';
 
 import searchClient from '../lib/searchClient';
 import { Autocomplete } from '../lib/autocomplete';
