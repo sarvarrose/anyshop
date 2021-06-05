@@ -1,7 +1,4 @@
 import '../assets/styles/product.css';
-import slider_arrow from '../assets/images/slider-arrow.svg';
-import minus from '../assets/images/minus.svg';
-import plus from '../assets/images/plus.svg';
 
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
@@ -97,7 +94,8 @@ function Product() {
             data-bs-target="#carouselExampleControlssss"
             data-bs-slide="prev"
           >
-            <img src={slider_arrow} alt="" />
+            <span className="btn fw-bold border rounded">{'<'}</span>
+
             <span className="visually-hidden">Previous</span>
           </button>
           <button
@@ -106,7 +104,7 @@ function Product() {
             data-bs-target="#carouselExampleControlssss"
             data-bs-slide="next"
           >
-            <img src={slider_arrow} alt="" />
+            <span className="btn fw-bold border rounded">{'>'}</span>
             <span className="visually-hidden">Next</span>
           </button>
         </div>
@@ -131,7 +129,7 @@ function Product() {
             updateQuantity(false);
           }}
         >
-          <img src={minus} alt="" />
+          <span className="btn fw-bold border rounded">-</span>
         </span>
         <span className="dynamic_text">{quantity}</span>
         <span
@@ -140,7 +138,7 @@ function Product() {
             updateQuantity(true);
           }}
         >
-          <img src={plus} alt="" />
+          <span className="btn fw-bold border rounded">+</span>
         </span>
       </div>
     );
