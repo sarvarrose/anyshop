@@ -7,6 +7,7 @@
     "@algolia/autocomplete-js": "^1.1.0",
     "@algolia/autocomplete-theme-classic": "^1.1.0",
     "@chec/commerce.js": "^2.6.0",
+    "@popperjs/core": "^2.9.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
