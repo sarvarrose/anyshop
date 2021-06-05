@@ -1,23 +1,27 @@
-import banner_image from '../../assets/images/banner.jpg';
+import { Link } from 'react-router-dom';
 
-function CarousalItem({ index, item }) {
+function CarousalItem({ product, index, item }) {
   return (
     <div className={`carousel-item${index === 0 ? ' active' : ''}`}>
       <div className="banner_main">
         <div className="banner_main_left">
-          <h1 className="heading_first">{item.heading}</h1>
+          <h1 className="heading_first">{product.name}</h1>
           <div className="banner_content">
-            <span className="banner_desc">{item.description}</span>
-            <span className="banner_discount_price">
-              {item.price_description}
+            <span className="banner_desc">
+              {product.price.formatted_with_symbol}
             </span>
-            <a className="add_btn" href={item.link}>
+            <span className="banner_discount_price">Description</span>
+            <Link className="add_btn" to={'/product/' + product.id}>
               Add to Cart
-            </a>
+            </Link>
           </div>
         </div>
         <div className="banner_main_right">
-          <img src={banner_image} alt="banner_img" className="img-fluid" />
+          <img
+            src={product.assets[0].url}
+            alt="banner_img"
+            className="img-fluid"
+          />
         </div>
       </div>
     </div>
