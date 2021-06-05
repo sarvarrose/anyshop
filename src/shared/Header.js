@@ -103,9 +103,6 @@ function Header() {
                         <Link to={'/category/jackets'}>Jackets</Link>
                       </li>
                       <li>
-                        <Link to={'/category/belts'}>Belts</Link>
-                      </li>
-                      <li>
                         <Link to={'/category/bags'}>Bags</Link>
                       </li>
                       <li>
