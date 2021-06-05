@@ -197,11 +197,13 @@ function Cart() {
                   Continue Shopping
                 </button>
               </Link>
-              <Link to={'/checkout'}>
-                <button className="shopping_btn Proceed">
-                  Proceed to Checkout
-                </button>
-              </Link>
+              {cart.total_items > 0 ?? (
+                <Link to={'/checkout'}>
+                  <button className="shopping_btn Proceed">
+                    Proceed to Checkout
+                  </button>
+                </Link>
+              )}
             </div>
           </div>
         </div>

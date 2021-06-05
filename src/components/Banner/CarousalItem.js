@@ -12,7 +12,7 @@ function CarousalItem({ product, index, item }) {
             </span>
             <span className="banner_discount_price">Description</span>
             <Link className="add_btn" to={'/product/' + product.id}>
-              Add to Cart
+              Know More
             </Link>
           </div>
         </div>
