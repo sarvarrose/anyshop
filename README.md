@@ -4,6 +4,9 @@ Pesto alpha team is proudly launching its own Online Leather Store **AnyShop**. 
 
 # Product Requirements
 
+### Design Screens
+- [Figma Designs](https://www.figma.com/file/l7TCUTDSyMlG8He9R9BE1G/AnyShop?node-id=209%3A0)
+
 ### Different parts/modules of the shop are. These are explained in detail later:
 
 - [ ] Authentication
