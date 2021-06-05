@@ -60,8 +60,8 @@ function Orders() {
         orders.map((order) => {
           console.log(order);
           return (
-            <div className="card" key={order.id}>
-              <div className="card-body">
+            <div className="border rounded" key={order.id}>
+              <div className="container">
                 <h5 className="card-title">Order ID: {order.id}</h5>
                 <h5 className="card-title">
                   Amount: {order.order_value.formatted_with_symbol}
