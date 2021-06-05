@@ -4,8 +4,11 @@ import React, { useState, useEffect } from 'react';
 // import { Link } from 'react-router-dom';
 import { useParams, Link } from 'react-router-dom';
 import Filter from '../components/Category/Filter';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
+
 function Category() {
   const currentLocation = location.pathname;
+  const [document_title, setDocumentTitle] = useDocumentTitle('Category');
   const { category } = useParams();
   const [products, setProducts] = useState([]);
   const [fetching, setFetching] = useState(true);
@@ -16,6 +19,11 @@ function Category() {
     console.log('route changed', category);
     setFetching(true);
     setProducts([]);
+    setDocumentTitle(
+      'Category - ' +
+        category[0].toUpperCase() +
+        category.substr(1).toLowerCase(),
+    );
     await fetchProducts().then((products) => {
       setProducts(products);
       setFetching(false);

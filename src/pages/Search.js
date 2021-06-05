@@ -15,6 +15,8 @@ import {
 import searchClient from '../lib/searchClient';
 
 function Search() {
+  const [document_title, setDocumentTitle] = useDocumentTitle('Product');
+
   function Hit({ hit }) {
     return (
       <div className="ct_items" key={hit.id}>

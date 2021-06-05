@@ -1,4 +1,7 @@
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 function StaticPage({ name }) {
+  const [document_title, setDocumentTitle] = useDocumentTitle(name);
+
   return (
     <div className="container">
       <div className="static">

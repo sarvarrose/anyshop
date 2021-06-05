@@ -7,10 +7,13 @@ import 'react-multi-carousel/lib/styles.css';
 
 import { commerce } from '../lib/commerce';
 import Banner from '../components/Banner';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 const { featuredProducts, dealsOfTheDay } = require('../config');
 
 function Home() {
+  const [document_title, setDocumentTitle] = useDocumentTitle('Home Page');
+
   const [featured, setFeatured] = useState([]);
   const [deals, setDeals] = useState([]);
   const [fetching, setFetching] = useState(true);

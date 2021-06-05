@@ -54,7 +54,7 @@
 /*=========== categories ============== */
 .categories_item {
     width: calc();
-    width: calc(100% - 238px);
+    /* width: calc(100% - 238px); */
     background: #fff;
 }
 .ct_body {
@@ -72,12 +72,12 @@
     padding: 20px;
     border: 1px solid #f0f0f0;
     margin: 15px;
-    width: 300px;
+    width: 210px;
 }
 .ct_body .ct_img img {
     /* max-width: 250px; */
     height: auto;
-    max-height: 253px;
+    max-height: 170px;
 }
 .ct_items .product_content .p_name {
     font-size: 18px;

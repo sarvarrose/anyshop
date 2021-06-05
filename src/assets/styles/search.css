@@ -1,4 +1,4 @@
-.search-panel__filters {
+/* .search-panel__filters {
   flex: 1;
 }
 
@@ -13,4 +13,200 @@
 .pagination {
   margin: 2rem auto;
   text-align: center;
+} */
+.search-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
+.search-panel__filters {
+  width: 255px;
+  background: #fff;
+  padding: 20px;
+}
+.search-panel__results {
+  width: calc(100% - 259px);
+  padding: 12px;
+  background: #fff;
+}
+.ais-SearchBox .ais-SearchBox-form {
+  width: 370px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.ais-SearchBox input{
+  width: 100%;
+  outline: none;
+  border: 1px solid #000;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  font-size: 16px;
+  height: 37px;
+  padding: 0 15px;
+}
+.ais-SearchBox .ais-SearchBox-form button{
+  height: 37px;
+  border: 1px solid #000;
+  outline: none;
+  background: #fff;
+  border-left: 0;
+  padding: 3px 14px;
+}
+.ais-SearchBox .ais-SearchBox-form button svg{
+  height: 16px;
+  width: 16px;
+}
+.ais-Hits .ais-Hits-list{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+.ais-Highlight {
+  font-size: 14px;
+  font-weight: 500;
+}
+.ais-SearchBox.searchbox {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 25px;
+  margin-bottom: 15px;
+}
+
+
+
+/* pagenation  */
+.pagination{
+  display: flex;
+  justify-content: center;
+}
+.ais-Pagination ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #fff;
+  padding: 8px;
+  border-radius: 50px;
+  box-shadow: 0px 10px 15px rgb(0 0 0 / 10%);
+  list-style: none;
+  margin: 0;
+}
+.ais-Pagination ul li {
+  color: #20B2AA;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.ais-Pagination ul li a:hover{
+  color: #fff;
+  background: #20B2AA;
+}
+.ais-Pagination ul li a{
+  text-decoration: none;
+  color:#20B2AA ;
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.ais-Pagination li.ais-Pagination-item.ais-Pagination-item--selected.ais-Pagination-item--page a{
+  color: #fff;
+  background: #20B2AA;
+}
+/* pagenation end */
+
+
+/* filter  */
+.ais-RefinementList ul{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.ais-RefinementList ul li{
+  margin: 0 0 3px 0;
+  padding: 5px 0;
+  cursor: pointer;
+}
+.ais-RefinementList ul li label{
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  color: #212121;
+  font-size: 14px;
+}
+.ais-RefinementList ul .ais-RefinementList-checkbox {
+  width: 1em;
+  height: 1em;
+  margin-top: .25em;
+  vertical-align: top;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid rgba(0,0,0,.25);
+  border-radius: .25em;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.ais-ClearRefinements{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+}
+.ais-ClearRefinements-button {
+  cursor: pointer;
+  color: #2874f0;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: none;
+  border: 1px solid #f0f0f0;
+  border-radius: 40px;
+  padding: 5px 10px;
+}
+/* range  */
+.ais-RangeInput-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top:15px;
+}
+.ais-RangeInput-form input {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 1px;
+  padding: 3px 8px;
+  font-size: 14px;
+  margin-right: 7px;
+}
+.ais-RangeInput .ais-RangeInput-separator{
+  margin: 0 4px;
+  display: block;
+  font-size: 14px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.ais-RangeInput .ais-RangeInput-submit {
+  font-size: 13px;
+  background-color: #e0e0e0;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+

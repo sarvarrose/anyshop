@@ -7,9 +7,11 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
 import { commerce } from '../lib/commerce';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 function Product() {
   let { id } = useParams();
+  const [document_title, setDocumentTitle] = useDocumentTitle('Product');
   const [product, setProduct] = useState([]);
   const [variance, setVariance] = useState(0);
   const [isProduct, setIsProduct] = useState(true);
@@ -23,6 +25,7 @@ function Product() {
     await fetchProduct(id)
       .then((product) => {
         setProduct(product);
+        setDocumentTitle(product.name);
         setFetching(false);
       })
       .catch((error) => {

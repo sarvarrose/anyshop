@@ -1,6 +1,10 @@
 import '../assets/styles/NotFound.css';
 
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
+
 function NotFound() {
+  const [document_title, setDocumentTitle] = useDocumentTitle('Search');
+
   return (
     <div id="message">
       <h1>Error: 404</h1>
