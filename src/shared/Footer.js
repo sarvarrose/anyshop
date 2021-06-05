@@ -2,9 +2,20 @@ import facebook from '../assets/images/facebook.svg';
 import linkedin from '../assets/images/linkedin.svg';
 import twitter from '../assets/images/twitter.svg';
 import youtube from '../assets/images/youtube.svg';
+
 import { Link } from 'react-router-dom';
 
 function Footer() {
+  const SocialItem = (link = '', image = '') => {
+    return (
+      <li>
+        <a href={link}>
+          <img src={image} alt="" />
+        </a>
+      </li>
+    );
+  };
+
   return (
     <footer className="footer">
       <div className="container">
@@ -43,26 +54,10 @@ function Footer() {
             <div className="social_media">
               <span>Follow us:</span>
               <ul>
-                <li>
-                  <a href="https://www.facebook.com">
-                    <img src={facebook} alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com">
-                    <img src={linkedin} alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://twitter.com">
-                    <img src={twitter} alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.youtube.com">
-                    <img src={youtube} alt="" />
-                  </a>
-                </li>
+                <SocialItem link="https://www.facebook.com" image={facebook} />
+                <SocialItem link="https://www.linkedin.com" image={linkedin} />
+                <SocialItem link="https://twitter.com" image={twitter} />
+                <SocialItem link="https://www.youtube.com" image={youtube} />
               </ul>
             </div>
           </div>
