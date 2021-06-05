@@ -1,0 +1,118 @@
+.checkout_sec {
+  margin: 27px 0;
+  background: #fff;
+  padding: 25px 0;
+}
+.shopping_address {
+  display: flex;
+  justify-content: space-between;
+}
+.shopping_left {
+  width: 67%;
+  border-right: 1px solid var(--gray);
+  padding-right: 13px;
+}
+.checkout_sec .shopping_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--gray);
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  flex-wrap: wrap;
+}
+.select_new_address a {
+  font-weight: 500;
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+}
+.select_new_address a i {
+  margin-right: 10px;
+}
+.select_btn {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  margin: 0;
+  padding: 14px 47px;
+  cursor: pointer;
+  color: var(--white);
+  font-weight: 500;
+  transition: all 0.2s;
+  background: #fb641b;
+  border-radius: 2px;
+}
+.selected_btn {
+  background: grey;
+}
+.select_address {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 20px 0;
+  border: 1px solid #f0f0f0;
+  padding: 25px 15px;
+}
+.select_address .user_details {
+  display: flex;
+  flex-direction: column;
+}
+.select_address .user_details .user_name {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.select_address .user_details .user_landmark {
+  font-size: 14px;
+}
+/* right  */
+.s_price_right .s_price_header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--gray);
+  margin-bottom: 45px;
+  padding-bottom: 41px;
+}
+.s_price_right {
+  width: 33%;
+  padding-left: 13px;
+}
+.shopping_price_body > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shopping_price_body ul > li {
+  margin-bottom: 7px;
+  font-size: 15px;
+}
+.pay_bill_sec {
+  border-top: 1px solid var(--gray);
+  margin: 20px 0 0 0;
+  padding: 20px 0 0 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.pay_bill_sec .total_price {
+  font-weight: 600;
+}
+
+.promo_code_sec input {
+  border: none;
+  outline: none;
+}
+.promo_code_sec .apply_btn {
+  border: none;
+  outline: none;
+  background: #dcdada;
+  position: absolute;
+  right: 9px;
+}
+.free {
+  color: #388e3c;
+  font-weight: 600;
+}
