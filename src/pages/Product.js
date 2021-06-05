@@ -114,9 +114,6 @@ function Product() {
           >
             ADD TO CART
           </a>
-          <a href="/" className="buy_now purchase_btn">
-            + WISHLIST
-          </a>
         </div>
       </div>
     );

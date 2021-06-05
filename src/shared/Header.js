@@ -161,9 +161,6 @@ function Header() {
                             <Link to={'/account/orders'}>Orders</Link>
                           </li>
                           <li>
-                            <Link to={'/account/wishlist'}>Wishlist</Link>
-                          </li>
-                          <li>
                             <button
                               className="header_btn"
                               onClick={() => {

@@ -119,13 +119,6 @@ function Cart() {
                 <span
                   data-toggle="tooltip"
                   data-placement="bottom"
-                  title="Move cart to WishList"
-                >
-                  <img src={heart} alt="heart" />
-                </span>
-                <span
-                  data-toggle="tooltip"
-                  data-placement="bottom"
                   title="Export Cart Items"
                   onClick={() => ExportToExcel()}
                 >
@@ -197,11 +190,13 @@ function Cart() {
                   Continue Shopping
                 </button>
               </Link>
-              <Link to={'/checkout'}>
-                <button className="shopping_btn Proceed">
-                  Proceed to Checkout
-                </button>
-              </Link>
+              {cart.total_items > 0 ?? (
+                <Link to={'/checkout'}>
+                  <button className="shopping_btn Proceed">
+                    Proceed to Checkout
+                  </button>
+                </Link>
+              )}
             </div>
           </div>
         </div>

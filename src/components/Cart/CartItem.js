@@ -49,7 +49,6 @@ function CartItem({ item, handleUpdateCartQty, handleRemoveFromCart }) {
             >
               Remove
             </a>
-            <a href="#">Move to Wishlist</a>
           </div>
         </div>
       </div>
