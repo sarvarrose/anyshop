@@ -107,24 +107,6 @@ function Home() {
       <section className="deals_sec">
         <div className="container">
           <div className="deals_header">
-            <h1 className="second_heading">Categories</h1>
-            <Link to="/search" className="view_btn">
-              VIEW ALL
-            </Link>
-          </div>
-          <div className="container">
-            <div className="row">
-              <div className="col">Shoes</div>
-              <div className="col">Jackets</div>
-              <div className="col">Bag</div>
-              <div className="col">Wallets</div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="deals_sec">
-        <div className="container">
-          <div className="deals_header">
             <h1 className="second_heading">Deals of the Day</h1>
             <Link to="/search" className="view_btn">
               VIEW ALL
