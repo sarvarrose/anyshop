@@ -6,7 +6,7 @@ import youtube from '../assets/images/youtube.svg';
 import { Link } from 'react-router-dom';
 
 function Footer() {
-  const SocialItem = (link = '', image = '') => {
+  const SocialItem = ({ link = '', image = '' }) => {
     return (
       <li>
         <a href={link}>
