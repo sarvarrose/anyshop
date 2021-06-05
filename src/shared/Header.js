@@ -49,10 +49,10 @@ function Header() {
     return (
       <div>
         <a href={'/product/' + item.id}>
-          <img src={item.image} />
-          <p>
+          <img className="ac_item_img" src={item.image} />
+          <span>
             {item.name} - {item.formatted_price}
-          </p>
+          </span>
         </a>
       </div>
     );

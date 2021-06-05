@@ -639,3 +639,8 @@ a {
 .static p {
   padding: 20px 0px;
 }
+
+img.ac_item_img {
+  height: 50px;
+  width: 50px;
+}
